@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { PRODUCTS } from './data/products-data';
+import { Product } from './models/products-models';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'app-products';
+  
+  products: Product[] = PRODUCTS;
+
+  constructor() {
+    console.log(this.products)
+  }
 }
